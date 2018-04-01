@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
 before_action :set_port, only: [:show, :edit, :update, :destroy]
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.all 
   end
 
   def show
@@ -51,7 +51,7 @@ before_action :set_port, only: [:show, :edit, :update, :destroy]
     #reroutes the destroy method
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'youre shit was deleted son' }
-      
+
     end
   end
 
