@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  include  Placeholder
   validates_presence_of :title, :body, :main_img, :thumb_img
 
   def self.reactnative
@@ -8,7 +9,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
   #even tho we dont have new image imput on new, this the default
   def set_defaults
-    self.main_img ||= "http://via.placeholder.com/600x200"
-    self.thumb_img ||= "http://via.placeholder.com/350x100"
+    self.main_img ||= Placeholder.image_generator(height:'600', width: '200')
+    self.thumb_img ||= Placeholder.image_generator(height:'350', width: '100')
   end
 end
