@@ -1,0 +1,15 @@
+<h1>Porfolio nicca</h1>
+
+
+<%= link_to "Create New item", new_portfolio_url %>
+<% @portfolio_items.each do |portfolio_item| %>
+  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
+  <p><%= portfolio_item.subtitle %></p>
+  <p><%= portfolio_item.body %></p>
+  <p><%= image_tag portfolio_item.thumb_img  unless portfolio_item.thumb_img.nil? %></p>
+
+  <td><%= link_to "Edit", edit_portfolio_path(portfolio_item) %><td>
+<td><%= link_to 'Delete post', portfolio_item, method: :delete, data: { confirm: 'you can still do callbacks but youre DELETING THIS' } %></td>
+
+
+<% end %>
