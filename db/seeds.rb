@@ -8,7 +8,7 @@ puts "3 topics made"
  Blog.create!(
    title: "this is my rails #{blog}",
    body: "Asymmetrical vegan yr williamsburg fam cronut. Slow-carb synth live-edge hexagon tumeric hammock. Pug health goth farm-to-table, raclette keffiyeh hammock pop-up try-hard blog listicle lyft hexagon hella. Jean shorts freegan meh enamel pin slow-carb, YOLO",
-   topic_id: Topic.last.id
+   # topic_id: Topic.last.id
  )
 end
  puts "10 blog post created"
