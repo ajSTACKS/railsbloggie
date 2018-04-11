@@ -14,7 +14,7 @@ before_action :set_port, only: [:show, :edit, :update, :destroy]
   end
 
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+    @portfolio_item = Portfolio.new(portfolio_params)
 
     respond_to do |format|
       if @portfolio_item.save
@@ -34,7 +34,7 @@ before_action :set_port, only: [:show, :edit, :update, :destroy]
   def update
 
     respond_to do |format|
-      if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
+      if @portfolio_item.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'the record was successfully updated.' }
 
       else
@@ -64,8 +64,11 @@ before_action :set_port, only: [:show, :edit, :update, :destroy]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def porfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :body, :main_img, :thumb_img)
+    def portfolio_params
+      params.require(:portfolio).permit(:title,
+                                        :subtitle,
+                                        :body,
+                                        :main_img, :thumb_img,  technologies_attributes: [:name])
     end
 
 
