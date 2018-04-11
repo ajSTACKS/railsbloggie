@@ -46,7 +46,7 @@ puts "created a skill 5 times"
 3.times do |technology|
   Portfolio.last.technologies.create!(
     name: "Technology #{technology}",
-
+    
   )
 end
 puts "3 technologies created"
