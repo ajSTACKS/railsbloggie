@@ -12,9 +12,10 @@
     </tr>
   </thead>
 
-  <tbody>
+  <% cache do %>
     <%= render @blogs %>
-  </tbody>
+  <% end %>
+
 </table>
 
 <br>
