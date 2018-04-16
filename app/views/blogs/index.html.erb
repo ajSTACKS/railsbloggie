@@ -2,22 +2,15 @@
 
 <h1>Blogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
+
 
   <% cache do %>
-    <%= render @blogs %>
+    <%= render partial: @blogs, spacer_template: 'blog_ruler' %>
   <% end %>
 
-</table>
 
-<br>
+
+
+
 
 <%= link_to 'New Blog', new_blog_path %>
