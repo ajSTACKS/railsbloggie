@@ -10,9 +10,6 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.special_blogs
-    puts "*" * 500
-    puts @blogs.inspect
-    puts "*" * 500
     @page_title = "Blog Dope"
   end
 
