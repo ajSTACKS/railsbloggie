@@ -6,7 +6,6 @@ layout "portfolio"
   end
 
   def show
-
   end
 
   def new
@@ -71,6 +70,4 @@ layout "portfolio"
                                         :body,
                                         :main_img, :thumb_img,  technologies_attributes: [:name])
     end
-
-
 end
