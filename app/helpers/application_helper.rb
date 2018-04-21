@@ -17,4 +17,11 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+  def copyright_generator
+    AjCopyrightTool::Renderer.copyright 'Angelo Jimenez',
+                                        'All Rights Reserved',
+                                        'style=color: orange'
+
+  end
 end

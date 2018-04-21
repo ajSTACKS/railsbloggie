@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ajSTACKS/aj_copyright_tool
+  revision: 6c7cc61b969fdafab942cce17fa62d53b624caf5
+  specs:
+    aj_copyright_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -193,6 +199,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 4.0)
+  aj_copyright_tool!
   bootstrap (~> 4.1.0)
   byebug
   coffee-rails (~> 4.2)
