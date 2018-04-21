@@ -21,7 +21,7 @@ module ApplicationHelper
   def copyright_generator
     AjCopyrightTool::Renderer.copyright 'Angelo Jimenez',
                                         'All Rights Reserved',
-                                        'style=color: orange'
+                                        'style="color: orange"'
 
   end
 end
