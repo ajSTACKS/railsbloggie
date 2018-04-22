@@ -1,5 +1,7 @@
 class PortfoliosController < ApplicationController
 before_action :set_port, only: [:show, :edit, :update, :destroy]
+access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all, message: "keep Trying sucka"
+
 layout "portfolio"
   def index
     @portfolio_items = Portfolio.all

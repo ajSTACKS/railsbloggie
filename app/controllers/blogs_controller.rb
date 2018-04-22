@@ -5,6 +5,7 @@ class BlogsController < ApplicationController
                                   :destroy,
                                   :toggle_status]
   layout "blog"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all, message: "keep Trying sucka"
 
   # GET /blogs
   # GET /blogs.json
