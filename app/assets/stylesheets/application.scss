@@ -5,3 +5,22 @@
 .top a {
   color: orange;
 }
+@import "gaia/variables";
+@import "gaia/mixins";
+
+@import "gaia/typography";
+
+// Core CSS
+@import "gaia/misc";
+@import "gaia/buttons";
+@import "gaia/inputs";
+@import "gaia/sections";
+@import "gaia/navbars";
+@import "gaia/footers";
+@import "gaia/labels";
+@import "gaia/social-buttons";
+@import "gaia/dropdown";
+@import "gaia/carousel";
+
+// Responsive Adjustments
+@import "gaia/responsive";
