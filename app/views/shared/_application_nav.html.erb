@@ -1,7 +1,26 @@
-<div class="<%= location %>">
-<%= link_to 'Home', root_path %>
-<%= link_to 'About', about_me_path %>
-<%= link_to 'Contact', contact_path %>
-<%= link_to 'Blog', blogs_path %>
-<%= link_to 'Portfolios', portfolios_path %>
-</div>
+<nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+  <div class="container">
+    <div class="navbar-header">
+        <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar bar1"></span>
+            <span class="icon-bar bar2"></span>
+            <span class="icon-bar bar3"></span>
+        </button>
+        <a href="#" class="navbar-brand">
+            Angelo Jimenez
+        </a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right navbar-uppercase">
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'About', about_me_path %></li>
+            <li><%= link_to 'Contact', contact_path %></li>
+            <li><%= link_to 'Blog', blogs_path, class: 'dropdown-toggle' %></li>
+            <li><%= link_to 'Portfolio', portfolios_path %></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+  </div>
+  </nav>
+</nav>

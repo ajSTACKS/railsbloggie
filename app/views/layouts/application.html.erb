@@ -22,11 +22,10 @@
       </head>
 
 <body>
-
-
-      <%= render 'shared/application_nav', location: 'top '%>
-
+  
+      <%= render 'shared/application_nav' %>
       <%= login_helper %>
+
 
       <%= yield %>
 
@@ -35,7 +34,5 @@
       <br>
       <%= copyright_generator %>
 
-
 </body>
-
 </html>
