@@ -22,17 +22,19 @@
       </head>
 
 <body>
-  
-      <%= render 'shared/application_nav' %>
-      <%= login_helper %>
 
 
-      <%= yield %>
+            <%= render 'shared/application_nav' %>
 
-      <%= source_helper('application') %>
 
-      <br>
-      <%= copyright_generator %>
+
+
+        <%= yield %>
+
+        <%= render 'shared/footer' %>
+
+
+        <%= source_helper('application') %>
 
 </body>
 </html>
