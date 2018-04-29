@@ -1202,11 +1202,7 @@ a.carousel-control span.fa {
   color: rgba(119, 119, 119, 0.3);
 }
 
-.section {
-  padding: 50px 0;
-  position: relative;
-  background-color: #FFFFFF;
-}
+
 
 .section-gray {
   background-color: #EEEEEE;
@@ -1217,9 +1213,7 @@ a.carousel-control span.fa {
   background-color: #FFFFFF;
 }
 
-.section {
-  position: relative;
-}
+
 .section .title-area {
   max-width: 760px;
   margin: 0 auto 70px;
