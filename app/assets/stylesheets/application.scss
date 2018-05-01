@@ -1,32 +1,6 @@
 @import "bootstrap";
 
 
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-
-/*
- * Base structure
- */
-
-html,
-body {
-  height: 100%;
-  background-color: #333;
-}
-body {
-  text-align: center;
-  text-shadow: 0 .05rem .25rem rgba(0,0,0,.2);
-}
-
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -148,6 +122,11 @@ body {
 .top a {
   color: orange;
 }
+.auth-links a {
+  color: orange;
+}
+
+
 @import "gaia/variables";
 @import "gaia/mixins";
 
