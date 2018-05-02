@@ -11,16 +11,15 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/application_nav' %>
 
 
 
-    <!-- <%= login_helper 'nav-link' %> -->
+    <%= login_helper  %>
 
     <%= yield %>
 
-    <!-- <%= render 'shared/nav', location: 'bottom' %> -->
+
 
     <%= source_helper('blog') %>
 

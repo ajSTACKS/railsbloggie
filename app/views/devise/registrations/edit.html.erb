@@ -32,12 +32,12 @@
             <i>(we need your current password to confirm your changes)</i>
             <%= f.password_field :current_password, autocomplete: "off", class: "form-control form-control-plain", placeholder: "Current Password" %>
           </div>
-          <div class="actions button-signin">
+          <div class="button-signin">
             <%= f.submit "Update", class: "btn btn-black btn-round btn-fill btn-wd" %>
           </div>
           <h3>Cancel my account</h3>
           <p>Unhappy?</p>
-          <div class=" actions button-signin">
+          <div class="button-signin">
               <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-black btn-round btn-fill btn-wd" %>
           </div>
           <p class='auth-links'>
