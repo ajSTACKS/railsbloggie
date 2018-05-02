@@ -112,12 +112,12 @@ small,
 }
 
 a{
-    color: #B15686;
+    color: $icon-black-color-top;
     opacity: 28.7;
     font-size: 14px;
 
     &:hover{
-        color: $dark-gray;
+        color: $light-gray;
         opacity: 1;
     }
 }
