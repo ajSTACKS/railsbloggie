@@ -114,7 +114,8 @@ small,
 a{
     color: $icon-black-color-top;
     opacity: 28.7;
-    font-size: 14px;
+    font-size: 15px;
+    text-transform: capitalize;
 
     &:hover{
         color: $light-gray;

@@ -1,6 +1,15 @@
-<h1>Editing Blog</h1>
+<div class="section section-contact-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <h2>Blog post Edit</h2>
+        <div class="separator separator-black">✻</div>
+        <%= render 'form', blog: @blog %>
 
-<%= render 'form', blog: @blog %>
-
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+        <%= link_to 'Show', @blog %>
+        |
+        <%= link_to 'Back', blogs_path %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,12 +5,12 @@ class BlogsController < ApplicationController
                                   :destroy,
                                   :toggle_status]
   layout "blog"
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all, message: "keep Trying sucka"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all, message: "Keep Trying"
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.special_blogs
+    @blogs = Blog.page(params[:page]).per(2)
     @page_title = "Blog Dope"
   end
 

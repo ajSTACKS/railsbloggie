@@ -1,16 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="section section-header-blog">
+  <div class="parallax filter filter-color-black">
+    <%= image_tag "header-10.jpeg" %>
+    <div class="container">
+      <div class="content">
+        <div class="title-area">
+          <h1>Built with Rails</h1>
+          <h3>Find only the best stories from your famous writer.</h3>
+          <% if logged_in?(:site_admin) %>
+          <button type="button" class="btn btn-white btn-fill"><%= link_to 'Create New Blog', new_blog_path %></button>
+          <% else %>
+          <button type="button" class="btn btn-white btn-fill">Read More</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>Blogs</h1>
+<div class="section section-card-blog">
+  <div class="container">
+    <div class="title-area">
+      <h2>Blog Posts</h2>
+      <div class="separator separator-black">✻</div>
+    </div>
 
+    <%= render @blogs %>
 
+  </div>
+</div>
 
-  <% cache do %>
-    <%= render partial: @blogs, spacer_template: 'blog_ruler' %>
-  <% end %>
-
-
-
-
-
-
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+<%= render 'shared/blog_footer' %>
