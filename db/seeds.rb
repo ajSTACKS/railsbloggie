@@ -18,7 +18,7 @@ end
     title: "we looped portfolio #{portfolio_item}",
     subtitle: "Ruby on Rails",
     body: "Tbh master cleanse normcore, polaroid cred art party etsy aesthetic glossier fixie raclette pabst chambray seitan.",
-    main_img: "http://via.placeholder.com/600x200",
+    main_img: "http://via.placeholder.com/600x400",
     thumb_img: "http://via.placeholder.com/350x100"
   )
 end
@@ -46,7 +46,7 @@ puts "created a skill 5 times"
 3.times do |technology|
   Portfolio.last.technologies.create!(
     name: "Technology #{technology}",
-    
+
   )
 end
 puts "3 technologies created"
