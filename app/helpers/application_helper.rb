@@ -25,4 +25,17 @@ module ApplicationHelper
                                         'style="color: #00abc0"'
 
   end
+
+  def nav_helper  tag_type
+nav_links = <<NAV
+<#{tag_type}><a href="#{root_path}" >Home</a></#{tag_type}>
+<#{tag_type}><a href="#{about_me_path}" >About</a></#{tag_type}>
+<#{tag_type}><a href="#{contact_path}" >Contact</a></#{tag_type}>
+<#{tag_type}><a href="#{blogs_path}" >Blog</a></#{tag_type}>
+<#{tag_type}><a href="#{portfolios_path}" >Portfolio</a></#{tag_type}>
+
+NAV
+
+  nav_links.html_safe
+  end
 end

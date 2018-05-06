@@ -13,11 +13,7 @@
     </div>
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right navbar-uppercase">
-            <li><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'About', about_me_path %></li>
-            <li><%= link_to 'Contact', contact_path %></li>
-            <li><%= link_to 'Blog', blogs_path, class: 'dropdown-toggle' %></li>
-            <li><%= link_to 'Portfolio', portfolios_path %></li>
+            <%= nav_helper 'li' %>
 
             <button class="btn btn-fill btn-black btn-round"><%= login_helper 'navlinks' %></button>
         </ul>
