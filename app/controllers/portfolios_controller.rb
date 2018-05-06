@@ -4,7 +4,7 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :up
 
 layout "portfolio"
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
   end
 
   def show

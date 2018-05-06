@@ -10,6 +10,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: "react Native")
   end
 
+  def self.by_position
+    order("position ASC")
+  end
+
   after_initialize :set_defaults
   #even tho we dont have new image imput on new, this the default
   def set_defaults
