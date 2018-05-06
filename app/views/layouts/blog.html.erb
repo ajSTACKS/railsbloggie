@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= @page_title %></title>
-    <%= csrf_meta_tags %>
+<head>
+  <title><%= @page_title %></title>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="<%= @seo_keywords %>" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png">
 
-    <meta name="keywords" content="<%= @seo_keywords %>" />
-    <%= stylesheet_link_tag "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" %>
-    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <!-- from rails project -->
+    <%= stylesheet_link_tag    'gaia', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-
-
-    <%= login_helper %>
+    <%= render 'shared/application_nav' %>
 
     <%= yield %>
-
-    <%= render 'shared/nav', location: 'bottom' %>
 
     <%= source_helper('blog') %>
 

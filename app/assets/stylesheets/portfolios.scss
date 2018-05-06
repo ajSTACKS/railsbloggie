@@ -1,12 +1,101 @@
 @import "bootstrap";
+@import "gaia/variables";
+@import "gaia/mixins";
+
+@import "gaia/typography";
+
+// Core CSS
+@import "gaia/misc";
+@import "gaia/buttons";
+@import "gaia/inputs";
+@import "gaia/sections";
+
+@import "gaia/footers";
+@import "gaia/labels";
+@import "gaia/social-buttons";
+@import "gaia/dropdown";
+@import "gaia/carousel";
+
+// Responsive Adjustments
+@import "gaia/responsive";
+
+
 body {
-  background-color: rgb(86, 98, 64);
-  color: ghostwhite;
-}
-.top a {
-  color: orange;
+  min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
-a {
-  text-decoration: none;
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+    float: left;
+    width: 33.333%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    position: relative;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+background-color: #fff;
+border: 1px solid rgba(0,0,0,.125);
+border-radius: .25rem;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.navbar .btn {
+  margin: 5px 2px;
+  font-size: 11px;
+  }
+
+.portfolio-form {
+  padding: 20px;
 }

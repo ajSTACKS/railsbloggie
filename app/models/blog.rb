@@ -8,6 +8,6 @@ class Blog < ApplicationRecord
   belongs_to :topic
 
   def self.special_blogs
-    all
+    limit(2)
   end
 end
