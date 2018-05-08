@@ -1,8 +1,9 @@
 class PortfoliosController < ApplicationController
 before_action :set_port, only: [:show, :edit, :update, :destroy]
+layout "portfolio"
 access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all, message: "keep Trying sucka"
 
-layout "portfolio"
+
   def index
     @portfolio_items = Portfolio.by_position
   end
@@ -30,7 +31,6 @@ layout "portfolio"
   end
 
   def edit
-    3.times { @portfolio_item.technologies.build }
   end
 
   def update

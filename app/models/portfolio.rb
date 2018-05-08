@@ -6,6 +6,10 @@ class Portfolio < ApplicationRecord
   include  Placeholder
   validates_presence_of :title, :body, :main_img, :thumb_img
 
+
+  mount_uploader :thumb_img, PortfolioUploader
+  mount_uploader :main_img, PortfolioUploader
+
   def self.reactnative
     where(subtitle: "react Native")
   end
