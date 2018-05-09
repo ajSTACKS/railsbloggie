@@ -1,24 +1,9 @@
 @import "bootstrap";
+@import "jquery-ui";
 @import "gaia/variables";
 @import "gaia/mixins";
-
-@import "gaia/typography";
-
-// Core CSS
-@import "gaia/misc";
 @import "gaia/buttons";
-@import "gaia/inputs";
-@import "gaia/sections";
-
-@import "gaia/footers";
-@import "gaia/labels";
-@import "gaia/social-buttons";
-@import "gaia/dropdown";
-@import "gaia/carousel";
-
-// Responsive Adjustments
-@import "gaia/responsive";
-
+@import "gaia/typography";
 
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
@@ -50,15 +35,15 @@ body {
 .album {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
-  padding-bottom: 3rem;
+
   background-color: #f7f7f7;
 }
 
 .card {
     float: left;
     width: 33.333%;
-    padding: .75rem;
-    margin-bottom: 2rem;
+    padding: .7rem;
+    margin-bottom: .75rem;
     position: relative;
 display: -webkit-box;
 display: -webkit-flex;
@@ -83,8 +68,8 @@ border-radius: .25rem;
 }
 
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 footer p {
@@ -95,7 +80,3 @@ footer p {
   margin: 5px 2px;
   font-size: 11px;
   }
-
-.portfolio-form {
-  padding: 20px;
-}
