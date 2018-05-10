@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
 before_action :set_port, only: [:show, :edit, :update, :destroy]
 layout "portfolio"
-access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all, message: "keep Trying sucka"
+access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all, message: "keep Trying"
 
 
   def index
@@ -13,7 +13,6 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :up
 
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -53,7 +52,7 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :up
 
     #reroutes the destroy method
     respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'youre shit was deleted son' }
+      format.html { redirect_to portfolios_url, notice: 'Record was deleted' }
 
     end
   end
@@ -70,6 +69,6 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :up
       params.require(:portfolio).permit(:title,
                                         :subtitle,
                                         :body,
-                                        :main_img, :thumb_img,  technologies_attributes: [:name])
+                                        :main_img, :thumb_img,  technologies_attributes: [:id, :name, :_destroy])
     end
 end

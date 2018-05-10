@@ -1,6 +1,7 @@
 class Portfolio < ApplicationRecord
   has_many :technologies
   accepts_nested_attributes_for :technologies,
+                               allow_destroy: true,
                                reject_if: lambda { |attrs| attrs['name'].blank?}
 
 
@@ -18,7 +19,7 @@ class Portfolio < ApplicationRecord
   end
 
 
-
+ scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
 
 
 end
