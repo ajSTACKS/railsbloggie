@@ -14,7 +14,7 @@
     <!--     Fonts and icons     -->
     <link href='https://fonts.googleapis.com/css?family=Cambo|Lato:400,700' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    
+
     <!-- from rails project -->
     <%= stylesheet_link_tag    'gaia', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -26,7 +26,7 @@
     <%= render 'shared/application_nav' %>
 
     <%= yield %>
-
+     <%= alerts %>
     <%= source_helper('blog') %>
 
 
