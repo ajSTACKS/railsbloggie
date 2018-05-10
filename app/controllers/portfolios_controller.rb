@@ -13,7 +13,6 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :up
 
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -70,6 +69,6 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :up
       params.require(:portfolio).permit(:title,
                                         :subtitle,
                                         :body,
-                                        :main_img, :thumb_img,  technologies_attributes: [:name])
+                                        :main_img, :thumb_img,  technologies_attributes: [:id, :name, :_destroy])
     end
 end
