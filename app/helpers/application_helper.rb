@@ -44,7 +44,7 @@ module ApplicationHelper
         title: 'Portfolio'
       },
       { url: tech_news_path,
-        title: 'Twitter News'
+        title: 'News'
       },
     ]
   end
