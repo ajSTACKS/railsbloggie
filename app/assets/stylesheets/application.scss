@@ -119,7 +119,7 @@
   }
 }
 
-
+// custom styles
 
 .auth-links a {
   color: #787878;
@@ -131,11 +131,17 @@
   color: white;
 }
 
+.tech-form{
+  margin-top: 110px;
+}
+.tech-card {
+  padding: 25px;
+}
+
+
 @import "gaia/variables";
 @import "gaia/mixins";
-
 @import "gaia/typography";
-
 // Core CSS
 @import "gaia/misc";
 @import "gaia/buttons";
@@ -147,6 +153,4 @@
 @import "gaia/social-buttons";
 @import "gaia/dropdown";
 @import "gaia/carousel";
-
-// Responsive Adjustments
 @import "gaia/responsive";
