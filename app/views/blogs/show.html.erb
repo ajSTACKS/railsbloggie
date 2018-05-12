@@ -8,7 +8,9 @@
             <%= @blog.title %>
           </div>
         </div>
-
+        <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+        |
+        <%= link_to 'Back', blogs_path %>
         <div class="form-group">
           <div class:="class:" "text-gray" %="%">
             <%= @blog.body %>
@@ -16,12 +18,9 @@
         </div>
 
         <%= render 'comments/comment_form' %>
-
-        <%= render @blog.comments %>
-
-        <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-        |
-        <%= link_to 'Back', blogs_path %>
+        <div id="comments" data-blog-id="<% @blog.id %>">
+          <%= render @blog.comments %>
+        </div>
       </div>
     </div>
   </div>
