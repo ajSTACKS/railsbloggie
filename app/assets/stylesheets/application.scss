@@ -140,7 +140,21 @@
     color: #00abc0;
   }
 }
+.row-pad {
+  padding: 20px;
+}
+.card-mar {
+  margin-top: 15px;
+}
 
+.comment-attribution {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.comment-name {
+  font-weight: 700;
+ }
 
 @import "gaia/variables";
 @import "gaia/mixins";
