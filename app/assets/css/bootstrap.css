@@ -4592,7 +4592,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   content: "/\00a0";
 }
 .breadcrumb > .active {
-  color: #777;
+  color: #aba7c4;
+  font-size: 16px;
 }
 .pagination {
   display: inline-block;
