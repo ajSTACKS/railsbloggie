@@ -1,7 +1,7 @@
 <div class="section section-contact-form">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 text-center">
+      <div class="col-md-6 text-left">
 
         <div class="form-group">
           <div class:="class:" "text-gray" %="%">
@@ -16,7 +16,7 @@
         <%= link_to 'Back', blogs_path %>
         <div class="form-group">
           <div class:="class:" "text-gray" %="%">
-            <%= @blog.body %>
+            <%= markdown @blog.body %>
           </div>
         </div>
 
