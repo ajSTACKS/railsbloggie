@@ -8,9 +8,15 @@
           <h3>Find only the best stories from your famous writer.</h3>
           <% if logged_in?(:site_admin) %>
           <button type="button" class="btn btn-white btn-fill"><%= link_to 'Create New Blog', new_blog_path %></button>
+
           <% else %>
           <button type="button" class="btn btn-white btn-fill">Read More</button>
           <% end %>
+          <button type="button" class="btn btn-fill btn-info">
+            <%= link_to "Topics", topics_path %>
+          </button>
+
+
         </div>
       </div>
     </div>
