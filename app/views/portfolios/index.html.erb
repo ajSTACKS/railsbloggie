@@ -1,7 +1,7 @@
 <div class="album text-muted">
   <div class="portfolio-form container">
     <div class="row">
-      <!-- <%= link_to "Create New item", new_portfolio_url if logged_in?(:site_admin) %> -->
+       <%= source_helper("alert alert-warning") %>
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
   </div>
