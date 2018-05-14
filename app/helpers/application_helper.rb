@@ -26,6 +26,7 @@ module ApplicationHelper
 
   end
 
+
   def nav_items
     [
       { url: root_path,
