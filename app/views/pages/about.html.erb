@@ -19,12 +19,15 @@
         <div class="col-md-4">
           <div class="title-area">
             <h5 class="subtitle text-gray">Est. 2017</h5>
-            <h2>Who am I</h2>
-            <div class="separator separator-danger">✻</div>
-          </div>
+            <h3>
+              Who I am
+            </h3>
+          </p>
+          <div class="separator separator-danger">✻</div>
         </div>
+        <p></div>
         <div class="col-md-7 col-md-offset-1">
-          <div class="description">
+          <div class="description" id="aboutHistory">
             <p>Dreams will manifest. I stand with the utmost humility. I started my journey not knowing who am I to reading books about code. I've always wanted to build something that can change peoples lives, so they can worry about the things that they love
               to do which makes them happier. And here I am building websites and figuring out how to build software.</p>
             <p>I would love to work with you because you will love my work the passion I bring into my code.</p>
@@ -40,7 +43,7 @@
           <div class="row">
             <div class="col-md-5 col-md-offset-1">
               <div class="card card-plain">
-                <%= image_tag "office-1.jpeg" %>
+                <%= image_tag "profpic.png" %>
               </div>
               <div class="card card-plain">
                 <%= image_tag "office-3.jpeg" %>
@@ -51,7 +54,7 @@
                 <%= image_tag "project-5.jpg" %>
               </div>
               <div class="card card-plain">
-                <%= image_tag "office-4.jpeg" %>
+                <%= image_tag "header-8.jpeg" %>
               </div>
             </div>
           </div>
@@ -67,6 +70,16 @@
       <div class="title-area">
         <h2>My Services</h2>
         <div class="separator separator-danger">✻</div>
+        <p class="description">Progress of skills</p>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <div class="progress-bar  progress-bar-striped bg-danger active" aria-valuenow="<%= skill.percent_utilized %>%" aria-valuemax="100" style="width: <%= skill.percent_utilized %>%"><%= skill.percent_utilized %>%</div>
+            </div>
+
+          <% end %>
+        </div>
         <p class="description">I build fast and robust wep apps. I promise to deliver a new look and most importantly, a new attitude</p>
       </div>
     </div>

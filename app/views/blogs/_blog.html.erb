@@ -1,72 +1,22 @@
-<div class="section section-card-blog">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card card-blog">
-          <%= image_tag 'header-5.jpeg'%>
-          <div class="content">
-            <div class="circle-black">
-              <div class="circle">
-                <span class="date-wrapper"><%= distance_of_time_in_words(blog.created_at, Time.now) %></span>
-              </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card-blog">
+        <div class="content">
+          <div class="circle-black">
+            <div class="circle">
+              <span class="date-wrapper">Posted
+                <%= distance_of_time_in_words(blog.created_at, Time.now) %>
+                ago</span>
             </div>
-            <h3 class="card-title"><%= link_to blog.title.upcase, blog %></h3>
-            <% if logged_in?(:site_admin) %>
-              <h6 class="card-category text-info"><%= link_to blog.status, toggle_status_blog_path(blog) %>
-                /
-                <%= link_to 'Edit', edit_blog_path(blog) %>
-                /
-                <%= link_to 'Delete post', blog, method: :delete, data: { confirm: 'Are you sure?' } %></h6>
-            <% end %>
-            <p class="text-description text-gray"><%= blog.body %></p>
           </div>
+          <h3 class="card-title"><%= link_to blog.title.upcase, blog %></h3>
+          <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
+          <p class="text-description text-gray"><%= blog.body %></p>
         </div>
-
       </div>
-      <div class="col-md-4">
-        <div class="card card-blog">
-          <%= image_tag 'header-6.jpeg'%>
-          <div class="content">
-            <div class="circle-black">
-              <div class="circle">
-                <span class="date-wrapper"><%= distance_of_time_in_words(blog.created_at, Time.now) %></span>
-              </div>
-            </div>
-            <h3 class="card-title"><%= link_to blog.title.upcase, blog %></h3>
-            <% if logged_in?(:site_admin) %>
-              <h6 class="card-category text-info"><%= link_to blog.status, toggle_status_blog_path(blog) %>
-                /
-                <%= link_to 'Edit', edit_blog_path(blog) %>
-                /
-                <%= link_to 'Delete post', blog, method: :delete, data: { confirm: 'Are you sure?' } %></h6>
-            <% end %>
-            <p class="text-description text-gray"><%= blog.body %></p>
-          </div>
-        </div>
 
-      </div>
-      <div class="col-md-4">
-        <div class="card card-blog">
-          <%= image_tag 'header-7.jpeg'%>
-          <div class="content">
-            <div class="circle-black">
-              <div class="circle">
-                <span class="date-wrapper"><%= distance_of_time_in_words(blog.created_at, Time.now) %></span>
-              </div>
-            </div>
-            <h3 class="card-title"><%= link_to blog.title.upcase, blog %></h3>
-            <% if logged_in?(:site_admin) %>
-              <h6 class="card-category text-info"><%= link_to blog.status, toggle_status_blog_path(blog) %>
-                /
-                <%= link_to 'Edit', edit_blog_path(blog) %>
-                /
-                <%= link_to 'Delete post', blog, method: :delete, data: { confirm: 'Are you sure?' } %></h6>
-            <% end %>
-            <p class="text-description text-gray"><%= blog.body %></p>
-          </div>
-        </div>
-
-      </div>
     </div>
+
   </div>
 </div>

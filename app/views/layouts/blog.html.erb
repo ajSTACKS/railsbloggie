@@ -6,14 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="keywords" content="<%= @seo_keywords %>" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png">
+  <%= favicon_link_tag 'favicon.ico' %>
 
 
 
     <!--     Fonts and icons     -->
     <link href='https://fonts.googleapis.com/css?family=Cambo|Lato:400,700' rel='stylesheet' type='text/css'>
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  
 
     <!-- from rails project -->
     <%= stylesheet_link_tag    'gaia', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -27,7 +26,7 @@
 
     <%= yield %>
      <%= alerts %>
-    <%= source_helper('blog') %>
+
 
 
   </body>

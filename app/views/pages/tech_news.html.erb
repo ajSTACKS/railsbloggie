@@ -1,4 +1,3 @@
-
 <div class="section section-header section-header-about">
   <div class="parallax filter filter-color-black">
 
@@ -21,17 +20,20 @@
         <div class="separator separator-danger">✻</div>
       </div>
     </div>
-<div class="album text-muted">
-  <div class="tech-form container">
-    <div class="row">
-    <% @tweets.each do |tweet| %>
-      <div class="col-md-6">
+    <div class="album text-muted">
+      <div class="tech-form container">
+        <div class="row">
+          <% @tweets.each do |tweet| %>
+            <div class="col-md-6">
 
-          <div class="tech-card card">
-            <%= twitter_parser tweet %>
-          </div>
-        
+              <div class="tech-card card">
+                <%= twitter_parser tweet %>
+              </div>
+
+            </div>
+          <% end %>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
-</div></div></div></div>
+</div>

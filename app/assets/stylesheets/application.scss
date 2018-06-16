@@ -1,8 +1,9 @@
 @import "bootstrap";
 @import "gritter";
+@import "font-awesome";
 
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
+
 .site-wrapper {
   display: table;
   width: 100%;
@@ -90,7 +91,6 @@
  */
 
 @media (min-width: 40em) {
-  /* Pull out the header and footer */
   .masthead {
     position: fixed;
     top: 0;
@@ -99,15 +99,15 @@
     position: fixed;
     bottom: 0;
   }
-  /* Start the vertical centering */
+
   .site-wrapper-inner {
     vertical-align: middle;
   }
-  /* Handle the widths */
+
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 100%;
   }
 }
 
@@ -129,6 +129,8 @@
 }
 .date-wrapper{
   color: white;
+  font-size: 11px;
+  font-style: italic;
 }
 
 .tech-form{
@@ -155,11 +157,26 @@
 .comment-name {
   font-weight: 700;
  }
+.title-pad{
+   padding-top: 10px;
+ }
+.text-left{
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
 
 @import "gaia/variables";
 @import "gaia/mixins";
 @import "gaia/typography";
-// Core CSS
 @import "gaia/misc";
 @import "gaia/buttons";
 @import "gaia/inputs";

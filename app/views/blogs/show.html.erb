@@ -1,25 +1,39 @@
 <div class="section section-contact-form">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-md-offset-4 text-center">
+      <div class="col-md-6 text-left">
 
-        <div class="form-group">
-          <div class:="class:" "text-gray" %="%">
-            <%= @blog.title %>
+        <nav aria-label="breadcrumb row">
+          <div class="breadcrumb">
+            <span class="breadcrumb-item active"><%= @blog.title %></span>
+
+            <span class="pull-right">
+              <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
+              <%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'Are you sure you want to delete?' } if logged_in?(:site_admin)%>
+            </span>
           </div>
-        </div>
-        <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-        |
+        </nav>
+
         <%= link_to 'Back', blogs_path %>
         <div class="form-group">
           <div class:="class:" "text-gray" %="%">
-            <%= @blog.body %>
+            <%= markdown @blog.body %>
           </div>
         </div>
 
         <%= render 'comments/comment_form' %>
         <div id="comments" data-blog-id="<%= @blog.id %>">
           <%= render @blog.comments %>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <%= source_helper("alert alert-info blog-sidebar-source") %>
+
+        <div class="sidebar-module">
+          <h4>Topics</h4>
+          <% @side_bar_topics.each do |topic| %>
+            <p><%= link_to topic.title, topic_path(topic) %></p>
+          <% end %>
         </div>
       </div>
     </div>
