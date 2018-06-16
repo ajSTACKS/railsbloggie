@@ -17,7 +17,7 @@ module BlogsHelper
       autolink: true,
       lax_html_blocks: true,
     }
-
+    #these options are just for code ray gemfile 
 
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe

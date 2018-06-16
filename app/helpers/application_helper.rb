@@ -14,7 +14,7 @@ module ApplicationHelper
 
   def source_helper(styles)
     if session[:source]
-      greeting = "thanks for visiting  #{session[:source]}, please feel free to #{ link_to 'contact me', contact_path } if you would like to work"
+      greeting = "Thanks for visiting  #{session[:source]}, Please feel free to #{ link_to 'contact me', contact_path } if you would like to work"
       content_tag(:div, greeting.html_safe, class: styles)
     end
   end

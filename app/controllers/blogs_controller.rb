@@ -5,12 +5,13 @@ class BlogsController < ApplicationController
                                   :destroy,
                                   :toggle_status]
 
-  before_action :set_sidebar_topics, except: [:update, :create, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:update,
+                                              :create,
+                                              :destroy,
+                                              :toggle_status]
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all, message: "Keep Trying"
 
-  # GET /blogs
-  # GET /blogs.json
   def index
     if logged_in?(:site_admin)
      @blogs = Blog.recent.page(params[:page]).per(5)
@@ -20,8 +21,6 @@ class BlogsController < ApplicationController
     @page_title = "Blog Dope"
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
   def show
     if logged_in?(:site_admin) || @blog.published?
       @blog = Blog.includes(:comments).friendly.find(params[:id])
@@ -33,17 +32,16 @@ class BlogsController < ApplicationController
     end
   end
 
-  # GET /blogs/new
+
   def new
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit
+
   def edit
   end
 
-  # POST /blogs
-  # POST /blogs.json
+
   def create
     @blog = Blog.new(blog_params)
 
@@ -58,8 +56,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
   def update
     respond_to do |format|
       if @blog.update(blog_params)
@@ -72,8 +68,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.json
+
   def destroy
     @blog.destroy
     respond_to do |format|
