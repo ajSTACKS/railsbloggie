@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/ajSTACKS/aj_copyright_tool
-  revision: 8951496059bb5fd0de32bd429e6cf0de247f1621
-  specs:
-    aj_copyright_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -300,7 +294,6 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 4.0)
-  aj_copyright_tool!
   bootstrap (~> 4.1.0.alpha6)
   byebug
   carrierwave (~> 1.2, >= 1.2.2)

@@ -19,12 +19,12 @@ module ApplicationHelper
     end
   end
 
-  def copyright_generator
-    AjCopyrightTool::Renderer.copyright 'Angelo Jimenez',
-                                        'All Rights Reserved',
-                                        'style="color: #00abc0"'
-
-  end
+  # def copyright_generator
+  #   AjCopyrightTool::Renderer.copyright 'Angelo Jimenez',
+  #                                       'All Rights Reserved',
+  #                                       'style="color: #00abc0"'
+  # this is the failed footer
+  # end
 
 
   def nav_items
