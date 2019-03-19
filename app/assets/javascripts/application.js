@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require gaia.js
+//= require gaia
 //= require cocoon
 //= require gritter
 //= require cable
